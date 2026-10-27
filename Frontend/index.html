@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pawmate</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="app">
+  <div class="brand"><span id="paw"></span> Pawmate <a class="login-link" href="login.html">Sign in</a></div>
+  
+  <section class="hello">
+    <div><div class="muted" id="helloSmall"></div><h1 id="helloBig"></h1></div>
+    <span id="cat"></span>
+  </section>
+  <div id="map" class="map" role="img" aria-label="Map of reported animals"></div>
+  <div class="row"><h2>Needs help nearby</h2><span class="muted">open cases</span></div>
+  <div id="list"></div>
+  <a class="btn big fab" href="report.html">+ Report an animal</a>
+</main>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/data.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

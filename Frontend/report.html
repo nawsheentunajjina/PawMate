@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Report an animal · Pawmate</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="app">
+  <div class="topbar"><a class="back" href="index.html" aria-label="Back to map">&larr;</a><h1>Report an animal</h1></div>
+  <form id="form">
+    <label class="photo" for="photo" id="photoBox">
+      <input type="file" id="photo" accept="image/*" capture="environment">
+      <span id="photoHint"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F9876F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><br><strong>Take or upload a photo</strong><br><span class="muted">A clear photo helps volunteers decide fast</span></span>
+    </label>
+    <div class="field"><div class="label">Which animal?</div>
+      <div class="chips" data-group="animal">
+        <button type="button" class="chip" aria-pressed="true">Dog</button>
+        <button type="button" class="chip" aria-pressed="false">Cat</button>
+        <button type="button" class="chip" aria-pressed="false">Other</button>
+      </div></div>
+    <div class="field"><div class="label">What is the problem?</div>
+      <div class="chips" data-group="problem">
+        <button type="button" class="chip" aria-pressed="true">Injured</button>
+        <button type="button" class="chip" aria-pressed="false">Sick</button>
+        <button type="button" class="chip" aria-pressed="false">Newborn, alone</button>
+      </div></div>
+    <div class="field"><label for="note">Anything else we should know?</label>
+      <textarea id="note" placeholder="e.g. near the tea stall, limping, scared"></textarea></div>
+    <div class="field"><label for="phone">Your phone (optional, only volunteers can see it)</label><input type="text" id="phone"></div>
+    <div class="loc">
+      <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#636363" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+      <div class="grow"><strong id="locTitle">Finding your location...</strong><div class="muted">Shared only with verified volunteers</div></div>
+      <button type="button" class="link-btn" id="locBtn">Refresh</button>
+    </div>
+    <button type="submit" class="btn big">Send report</button>
+  </form>
+</main>
+<script src="js/data.js"></script>
+<script src="js/report.js"></script>
+</body>
+</html>

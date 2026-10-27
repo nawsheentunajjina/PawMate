@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign up · Pawmate</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@600;700&family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="app">
+  <div class="topbar"><a class="back" href="index.html" aria-label="Back">&larr;</a><h1>Create account</h1></div>
+  <form id="form">
+    <div class="field"><label for="name">Name</label><input type="text" id="name" required></div>
+    <div class="field"><label for="email">Email</label><input type="email" id="email" required></div>
+    <div class="field"><label for="phone">Phone (optional)</label><input type="text" id="phone"></div>
+    <div class="field"><label for="pass">Password</label><input type="password" id="pass" required minlength="6"></div>
+    
+      <div class="roles">
+        <label><input type="radio" name="role" value="user" checked>Report animals</label>
+        <label><input type="radio" name="role" value="volunteer">Help as a volunteer</label>
+      </div></div>
+    <p id="error" role="alert" style="color:#B3261E;font-size:14px;min-height:20px"></p>
+    <button class="btn big" type="submit">Sign up</button>
+    <p class="muted">Already have an account? <a href="login.html">Log in</a></p>
+    <p class="muted">Want to help animals? <a href="volunteer-signup.html">Become a volunteer</a></p>
+  </form>
+  
+</main>
+<script src="js/data.js"></script>
+<script src="js/signup.js"></script>
+</body>
+</html>
